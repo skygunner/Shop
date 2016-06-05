@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>{$smarty.const.SHOP_NAME} - 管理中心</title>
+    <link href="{$smarty.const.PUBLIC_URL}css/bootstrap.min.css" rel="stylesheet">
+</head>
+<frameset border="0" framespacing="0" rows="91,*" frameborder="0">
+    <frame name="head" src="head" frameborder="0" noresize="" scrolling="no">
+    <frameset cols="180,*">
+        <frame name="left" src="{$smarty.const.__MODULE__}/Index/left" frameborder="0" noresize="" >
+        <frame name="right" src="{$smarty.const.__MODULE__}/Index/main" frameborder="0" noresize="" >
+    </frameset>
+</frameset>
+<noframes></noframes>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link href="{$smarty.const.PUBLIC_URL}css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" style="height: 80px;" >
+        <div class="col-sm-1"></div>
+        <div class="col-sm-11">
+            <div id="logo" style="position:relative;width:300px;margin:10px 0 0;height:60px">
+                <a href="{$smarty.const.SHOP_URL}" style="outline: rgb(109, 109, 109) none 0px;">
+                    <img src="//misc.360buyimg.com/lib/img/e/logo-201305-b.png" alt="{$smarty.const.SHOP_NAME}" width="170" height="60"></a>
+                <b style="display:block;width:110px;height:40px;position:absolute;right:0;top:15px;background:url(//misc.360buyimg.com/user/passport/1.0.0/css/i/l-icon.png) no-repeat"></b>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color: #ffb90f;height: 475px;">
+        <div style="height: 475px;width: 1020px;margin: 0 auto">
+            <div class="col-sm-8">
+                <div class="row" style="margin-left: 0px;;width: 100%;height: 475px;background: url(//img13.360buyimg.com/da/jfs/t2932/51/102247810/124862/a80d4bd6/574badb9N35ce06d8.jpg) 0 0 no-repeat"></div>
+            </div>
+            <div class="col-sm-4">
+                <div class="login-form" style="position:relative;z-index:4;width:346px;height:357px;background:#fff;padding:20px;overflow:visible;float:right;top:40px">
+                    <div><h3 style="margin-top: 0;">{$smarty.const.SHOP_NAME_JANE}会员<a href="{$smarty.const.__MODULE__}/Index/register" style="font-size: 15px;float: right;line-height: 30px;"><i class="glyphicon glyphicon-circle-arrow-right"></i> 立即注册</a></h3></div>
+                    <div class="msg-warn" style="position:relative;background:#fff6d2;color:#666;border:1px solid #ffe57d;padding:3px 10px 3px 40px;line-height:18px;height:25px;margin-bottom: 20px;"><b style="position:absolute;top:11px;left:15px;display:block;margin-top:-8px;width:16px;height:17px;overflow:hidden;background:url(//misc.360buyimg.com/user/passport/1.0.0/widget/login-form/i/pwd-icons-new.png) -104px -22px no-repeat"></b>公共场所不建议自动登录，以防账号丢失</div>
+                    <form class="form-horizontal" name="login" action="{$smarty.const.__SELF__}" method="post">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">用户名:</label>
+                            <div class="col-sm-9" style="padding-left:0">
+                                <input type="text" name="username" class="form-control" placeholder="邮箱/用户名/已验证手机">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">密　码:</label>
+                            <div class="col-sm-9" style="padding-left:0">
+                                <input type="password" class="form-control" name="password" placeholder="密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-6" style="margin-left: 10px">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked> 自动登陆
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-5" style="float: right;right: -20px;">
+                                <div class="checkbox">
+                                    <label><a href="#">忘记密码?</a></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn btn-danger" style="width: 100%;height: auto"><b>登　陆</b></button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="coagent">
+                        <h5 style="font-weight:400;color:#999">使用合作网站账号登录京东：</h5>
+                        <ul>
+                            <li style="list-style:none;float: left;padding:0 15px;border-right:1px solid #ccc">
+                                <a style="color:#666;text-decoration:none" href="#">支付宝</a>
+                            </li>
+                            <li  style="list-style:none;float: left;padding:0 15px;border-right:1px solid #ccc">
+                                <a style="color:#666;text-decoration:none" href="#">QQ</a>
+                            </li>
+                            <li  style="list-style:none;float: left;padding:0 15px;">
+                                <a style="color:#666;text-decoration:none" href="#">微信</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="{$smarty.const.PUBLIC_URL}js/jquery.min.js"></script>
+<script src="{$smarty.const.PUBLIC_URL}js/bootstrap.min.js"></script>
+</body>
+</html>

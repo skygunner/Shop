@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link href="{$smarty.const.PUBLIC_URL}css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel">
+        <div class="panel-heading"  id="headingOne"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp;商品管理
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li><a href="{$smarty.const.__MODULE__}/Goods/showlist" target="right" >商品列表</a></li>
+                    <li><a href="#" target="right" >添加商品</a></li>
+                    <li><a href="#" target="right" >商品采集</a></li>
+                    <li><a href="#" target="right" >商品分类</a></li>
+                    <li><a href="#" target="right" >商品类型</a></li>
+                    <li><a href="#" target="right" >商品品牌</a></li>
+                    <li><a href="#" target="right" >仓库管理</a></li>
+                    <li><a href="#" target="right" >商品回收站</a></li>
+                    <li><a href="#" target="right" >商品批量操作</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="headingTwo"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;订单管理
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="#" target="right" >主页示例一</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例四</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">主页示例五</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="headingThree"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;会员管理
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="{$smarty.const.__MODULE__}/User/show_user" target="right" >会员列表</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="Four"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>&nbsp;促销活动
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="#" target="right" >主页示例一</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="headingFive"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>&nbsp;广告管理
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="#" target="right" >主页示例一</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="headingSix"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            <span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;文章管理
+        </div>
+        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="#" target="right" >主页示例一</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="headingSeven"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span>&nbsp;统计管理
+        </div>
+        <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="#" target="right" >主页示例一</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="headingEight"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;平台管理
+        </div>
+        <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="#" target="right" >主页示例一</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="headingNine"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>&nbsp;入住商家
+        </div>
+        <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="#" target="right" >主页示例一</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-heading collapsed" id="headingTen"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;系统管理
+        </div>
+        <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+            <div class="panel-body">
+                <ul class="nav nav-second-level collapse in" aria-expanded="true">
+                    <li>
+                        <a href="right" target="right" >系统信息</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例二</a>
+                    </li>
+                    <li>
+                        <a href="#" target="right" >主页示例三</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="{$smarty.const.PUBLIC_URL}js/jquery.min.js"></script>
+<script src="{$smarty.const.PUBLIC_URL}js/bootstrap.min.js"></script>
+</body>
+</html>
