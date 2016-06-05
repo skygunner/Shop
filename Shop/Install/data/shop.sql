@@ -7,6 +7,8 @@
  * Http: www.hongyuvip.com
  */
 
+INSERT INTO hy_admin(adminname,password) VALUES('admin','e10adc3949ba59abbe56e057f20f883e');
+
 CREATE TABLE `hy_admin` (
 `admin_id`  smallint(5) UNSIGNED NULL AUTO_INCREMENT COMMENT '管理员自增id编号' ,
 `adminname`  varchar(100) NOT NULL COMMENT '管理员用户名' ,
