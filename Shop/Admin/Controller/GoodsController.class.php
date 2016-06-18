@@ -9,8 +9,8 @@
  */
 
 namespace Admin\Controller;
-use Think\Controller;
-class GoodsController extends Controller {
+use Admin\Controller\IndexController;
+class GoodsController extends IndexController {
     //商品列表展示
     function showlist(){
         $goods = D("Goods");

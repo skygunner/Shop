@@ -7,6 +7,7 @@
 
 
 ## ThinkPHP
+* {include file="Shop/Home/View/Public/header.html"}    (引入HTML模板文件)
 * 自动加载-自定义函数库   (应用目录/Common/Common/function.php)
 * var_dump(get_defined_constants(true));  (显示系统变量)
 * 网址跳转  ( $this -> success('注册成功',U('Index/login')); )
@@ -25,13 +26,17 @@
     假设扩展配置文件user.php 和db.php分别用于用户配置和数据库配置，这样做的好处是哪怕以后关闭调试模式，你修改db配置文件后依然会自动生效。
     如果在应用公共设置文件中配置的话，那么会自动加载应用公共配置目录下面的配置文件Application/Common/Conf/user.php和Application/Common/Conf/db.php。
     如果在模块（假设是Home模块）的配置文件中配置的话，则会自动加载模块目录下面的配置文件 Application/Home/Conf/user.php 和 Application/Home/Conf/db.php。
-
-
-
+* 当前控制器 __CONTROLLER__
 
 
 ## JS
 * onclick="this.src='图片src地址'"  (单击刷新图片验证码,可放到<img>标签中)
+* document.getElementById("元素ID").click();  (触发元素单击事件-并打开链接)
+* document.documentElement.scrollTop = document.body.scrollTop =0;  (返回顶部)
+* window.onload=function(){}	(HTML页面加载完成后执行)
+
+## JQuery
+* $(document).ready(function(){}	(HTML页面加载完成后执行简写: $(function(){}); )
 
 ## PHP
 * 判断用户名和密码 ( select * from 表名 where name=$name and pwd=$pwd; )
@@ -40,8 +45,8 @@
     Apache版本      apache_get_version()
     PHP版本         PHP_VERSION
     运行方式        PHP_SAPI
-
-
+* header("Content-Type:text/html;charset=utf-8");   （设置UTF-8格式）
+* date_default_timezone_set('Asia/Shanghai');   （设置上海时区为默认时区）
 
 
 
@@ -58,7 +63,18 @@
 
 
 
-
+## 常用功能
+* 楼层直达
+     <ul class="nav_ul">
+              <li class="current"><a href="#floor-1">floor 1</a></li>
+              <li><a href="#b">floor 2</a></li>
+              <li><a href="#c">floor 3</a></li>
+              <li><a href="#d">floor 4</a></li>
+     </ul>
+    <div class="section" id="floor-1">
+        <strong>floor 1</strong>
+        <p>这是一楼</p>
+    </div>
 
 
 

@@ -27,22 +27,23 @@
             </div>
             <div class="col-sm-4">
                 <div class="login-form" style="position:relative;z-index:4;width:346px;height:357px;background:#fff;padding:20px;overflow:visible;float:right;top:40px">
-                    <div><h3 style="margin-top: 0;">{$smarty.const.SHOP_NAME_JANE}会员<a href="{$smarty.const.__MODULE__}/Index/register" style="font-size: 15px;float: right;line-height: 30px;"><i class="glyphicon glyphicon-circle-arrow-right"></i> 立即注册</a></h3></div>
+                    <div><h3 style="margin-top: 0;">{$smarty.const.SHOP_NAME_JANE}会员<a href="{$smarty.const.__MODULE__}/User/register" style="font-size: 15px;float: right;line-height: 30px;"><i class="glyphicon glyphicon-circle-arrow-right"></i> 立即注册</a></h3></div>
                     <div class="msg-warn" style="position:relative;background:#fff6d2;color:#666;border:1px solid #ffe57d;padding:3px 10px 3px 40px;line-height:18px;height:25px;margin-bottom: 20px;"><b style="position:absolute;top:11px;left:15px;display:block;margin-top:-8px;width:16px;height:17px;overflow:hidden;background:url(//misc.360buyimg.com/user/passport/1.0.0/widget/login-form/i/pwd-icons-new.png) -104px -22px no-repeat"></b>公共场所不建议自动登录，以防账号丢失</div>
                     <form class="form-horizontal" name="login" action="{$smarty.const.__SELF__}" method="post">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">用户名:</label>
-                            <div class="col-sm-9" style="padding-left:0">
+                        <div class="form-group col-sm-12 col-sm-offset-1">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 <input type="text" name="username" class="form-control" placeholder="邮箱/用户名/已验证手机">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">密　码:</label>
-                            <div class="col-sm-9" style="padding-left:0">
+                        <div class="form-group col-sm-12 col-sm-offset-1">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                 <input type="password" class="form-control" name="password" placeholder="密码">
                             </div>
+
                         </div>
-                        <div class="form-group">
+                        <div class="form-group ">
                             <div class="col-sm-6" style="margin-left: 10px">
                                 <div class="checkbox">
                                     <label>
@@ -63,7 +64,7 @@
                         </div>
                     </form>
                     <div class="coagent">
-                        <h5 style="font-weight:400;color:#999">使用合作网站账号登录京东：</h5>
+                        <h5 style="font-weight:400;color:#999">使用合作网站账号登录：</h5>
                         <ul>
                             <li style="list-style:none;float: left;padding:0 15px;border-right:1px solid #ccc">
                                 <a style="color:#666;text-decoration:none" href="#">支付宝</a>

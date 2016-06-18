@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link href="{$smarty.const.PUBLIC_URL}css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <ul class="breadcrumb" style="margin-top:15px;;margin-bottom:15px;border: 1px solid #ddd;" onfocus="this.blur()">
+        <li><a href="{$smarty.const.__MODULE__}/Manager/listAdmin" style="cursor: pointer">管理员列表</a> <span class="divider"></span></li>
+        <li class="active">添加管理员</li>
+    </ul>
+
+    <form class="form-horizontal" action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">用户名：</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="adminname" placeholder="请输入管理员用户名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">密　码：</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="password" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">手机号：</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="mobile_phone" placeholder="请输入手机号">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">邮　箱：</label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" name="email" placeholder="请输入邮箱">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-primary btn-success" type="submit">添　加</button>
+                <button type="reset" class="btn btn-default">重　置</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+<script src="{$smarty.const.PUBLIC_URL}js/jquery.min.js"></script>
+<script src="{$smarty.const.PUBLIC_URL}js/bootstrap.min.js"></script>
+</body>
+</html>

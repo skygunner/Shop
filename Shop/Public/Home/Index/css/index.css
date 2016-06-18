@@ -237,7 +237,7 @@ _display: block;
 
 /*轮播图上方 导航栏 横向一栏*/
 .clear{clear:both;}
-.focus{width:1210px;margin:0 auto;height:46px;position:relative;}
+.focus{width:1210px;margin:0 auto;height:46px;position:relative;font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif}
 .focus .focus-a{width:210px;height:44px;background-color: #B1191A;}
 .focus .focus-a .nav-img2{width:100%;}
 .focus .focus-a .fouc-font{position:absolute;top:12px;left:10px;}
@@ -1236,8 +1236,8 @@ height: 80px;
 }
 #service-2014 .slogen {
 position: relative;
-height: 54px;
-padding: 20px 0;
+    width: 100%;
+height: 91px;
 margin-bottom: 20px;
 background: #F5F5F5;
 text-align: center;

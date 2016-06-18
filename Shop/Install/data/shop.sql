@@ -7,27 +7,33 @@
  * Http: www.hongyuvip.com
  */
 
+-- 导入数据
 INSERT INTO hy_admin(adminname,password) VALUES('admin','e10adc3949ba59abbe56e057f20f883e');
 
+-- 如果存在就删除掉表
+DROP TABLE IF EXISTS hy_admin;
+
+-- 创建表
+
+DROP TABLE IF EXISTS hy_admin;
 CREATE TABLE `hy_admin` (
-`admin_id`  smallint(5) UNSIGNED NULL AUTO_INCREMENT COMMENT '管理员自增id编号' ,
-`adminname`  varchar(100) NOT NULL COMMENT '管理员用户名' ,
-`password`  varchar(255) NOT NULL COMMENT '密码' ,
-`email`  varchar(100) NOT NULL COMMENT '邮箱' ,
+`admin_id`  tinyint UNSIGNED NULL AUTO_INCREMENT COMMENT '管理员自增id编号' ,
+`adminname`  varchar(30) NOT NULL COMMENT '管理员用户名' ,
+`password`  char(32) NOT NULL COMMENT '密码' ,
+`email`  varchar(30) NOT NULL COMMENT '邮箱' ,
 `mobile`  varchar(11) NOT NULL COMMENT '手机号' ,
-`question`  varchar(100) NOT NULL COMMENT '密保提问' ,
-`answer`  varchar(100) NOT NULL COMMENT '密保回答' ,
+`question`  varchar(30) NOT NULL COMMENT '密保提问' ,
+`answer`  varchar(30) NOT NULL COMMENT '密保回答' ,
 `reg_time`  int(10) NOT NULL COMMENT '注册时间' ,
 `last_login`  int(11) NOT NULL COMMENT '最后一次登录时间' ,
 `is_status`  tinyint(1) NOT NULL DEFAULT 1 COMMENT '是否可用;0否;1是' ,
 PRIMARY KEY (`admin_id`)
-)
-;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `hy_user` (
 `user_id`  mediumint(8) UNSIGNED NULL AUTO_INCREMENT COMMENT '会员自增id编号' ,
 `username`  varchar(100) NOT NULL COMMENT '会员用户名' ,
-`password`  varchar(255) NOT NULL COMMENT '密码' ,
+`password`  char(32) NOT NULL COMMENT '密码' ,
 `email`  varchar(100) NOT NULL COMMENT '邮箱' ,
 `mobile`  varchar(11) NOT NULL COMMENT '手机号' ,
 `tel`  varchar(20) NOT NULL COMMENT '固定电话' ,
@@ -44,8 +50,12 @@ CREATE TABLE `hy_user` (
 `question`  varchar(100) NOT NULL COMMENT '密保提问' ,
 `answer`  varchar(100) NOT NULL COMMENT '密保回答' ,
 `parent_id`  mediumint(9) NOT NULL COMMENT '推荐人会员id' ,
-`reg_time`  int(10) NOT NULL COMMENT '注册时间' ,
-`last_login`  int(11) NOT NULL COMMENT '最后一次登录时间' ,
+`regdate` int(10) unsigned NOT NULL COMMENT '注册时间',
+`lastdate` int(10) unsigned NOT NULL COMMENT '最后一次登录时间',
+`regip` char(15) NOT NULL DEFAULT '' COMMENT '注册ip',
+`lastip` char(15) NOT NULL DEFAULT '' COMMENT '最后一次登录ip',
+`loginnum` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '登录次数',
+`islock` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否锁定',
 `is_status`  tinyint(1) NOT NULL DEFAULT 1 COMMENT '是否可用;0否;1是' ,
 PRIMARY KEY (`user_id`)
 )

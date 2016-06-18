@@ -16,7 +16,7 @@
         <div class="col-sm-10">
             <a href="{$smarty.const.SHOP_URL}" class="logo" style="background:url(//misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png) no-repeat;width:160px;height:50px;float:left;margin-top:24px"></a>
             <div class="logo-title" style="float:left;height:34px;line-height:34px;font-size:20px;color:#000;border-left:solid 1px #bbb;margin-left:25px;padding-left:25px;margin-top:36px"><b>欢 迎 注 册</b></div>
-            <div class="have-account" style="font-size:16px;float:right;margin-top:55px;color:#999"><b>已有账号 <a href="{$smarty.const.__MODULE__}/Index/login" style="color: #333"><i class="glyphicon glyphicon-user"></i> 请登录</a></b></div>
+            <div class="have-account" style="font-size:16px;float:right;margin-top:55px;color:#999"><b>已有账号 <a href="{$smarty.const.__MODULE__}/User/login" style="color: #333"><i class="glyphicon glyphicon-user"></i> 请登录</a></b></div>
         </div>
         <div class="col-sm-1"></div>
     </div>
@@ -96,123 +96,123 @@
 <script src="{$smarty.const.PUBLIC_URL}js/jquery.min.js"></script>
 <script src="{$smarty.const.PUBLIC_URL}js/bootstrap.min.js"></script>
 <script type="text/javascript">
-//    window.onload = function() {
-//        var reg = document.register;
-//
-//        //用户名
-//        reg.username.onfocus = function(){
-//            if (reg.username.value == "") {
-//                this.style.cssText ="border:1px solid #ccc;";
-//                this.setAttribute("placeholder","您的账户名和登录名");
-//            }
-//        };
-//        reg.username.onblur  = function(){
-//            if (reg.username.value == "") {
-//                this.style.cssText = "border:1px solid red;";
-//                this.setAttribute("placeholder", "用户名不能为空");
-//            }
-//        };
-//
-//        //密码
-//        reg.password.onfocus = function(){
-//            if (reg.password.value == "") {
-//                this.style.cssText ="border:1px solid #ccc;";
-//                this.setAttribute("placeholder","建议至少使用两种字符组合");
-//            }
-//        };
-//        reg.password.onblur  = function(){
-//            if (reg.password.value == "") {
-//                this.style.cssText = "border:1px solid red;";
-//                this.setAttribute("placeholder", "密码不能为空");
-//            }
-//        };
-//
-//        //再次输入密码
-//        reg.repassword.onfocus = function(){
-//            if (reg.repassword.value == "") {
-//                this.style.cssText ="border:1px solid #ccc;";
-//                this.setAttribute("placeholder","请再次输入密码");
-//            }
-//        };
-//        reg.repassword.onblur  = function(){
-//            if (reg.repassword.value == "") {
-//                this.style.cssText = "border:1px solid red;";
-//                this.setAttribute("placeholder", "请再次输入密码");
-//            }
-//        };
-//
-//        //手机号
-//        reg.mobile.onfocus = function(){
-//            if (reg.mobile.value == "") {
-//                this.style.cssText ="border:1px solid #ccc;";
-//                this.setAttribute("placeholder","请输入手机号");
-//            }
-//        };
-//        reg.mobile.onblur  = function(){
-//            if (reg.mobile.value == "") {
-//                this.style.cssText = "border:1px solid red;";
-//                this.setAttribute("placeholder", "手机号不能为空");
-//            }
-//        };
-//        //验证码
-//        reg.verify.onfocus = function(){
-//            if (reg.verify.value == "") {
-//                this.style.cssText ="border:1px solid #ccc;";
-//                this.setAttribute("placeholder","请输入验证码");
-//            }
-//        };
-//        reg.verify.onblur  = function(){
-//            if (reg.verify.value == "") {
-//                this.style.cssText = "border:1px solid red;";
-//                this.setAttribute("placeholder", "验证码不能为空");
-//            }
-//        };
-//
-//        //手机验证码
-//        reg.mobilecode.onfocus = function(){
-//            if (reg.mobilecode.value == "") {
-//                this.style.cssText ="border:1px solid #ccc;";
-//                this.setAttribute("placeholder","请输入手机验证码");
-//            }
-//        };
-//        reg.mobilecode.onblur  = function(){
-//            if (reg.mobilecode.value == "") {
-//                this.style.cssText = "border:1px solid red;";
-//                this.setAttribute("placeholder", "手机验证码不能为空");
-//            }
-//        };
-//    };
-//
-//    function fromCheck(){
-//        var reg = document.register;
-//
-//        if(reg.username.value==""){
-//            reg.username.onblur();
-//            return false;
-//        }
-//        else if(reg.password.value==""){
-//            reg.password.onblur();
-//            return false;
-//        }
-//        else if(reg.repassword.value==""){
-//            reg.repassword.onblur();
-//            return false;
-//        }
-//        else if(reg.mobile.value==""){
-//            reg.mobile.onblur();
-//            return false;
-//        }
-//        else if(reg.verify.value==""){
-//            reg.verify.onblur();
-//            return false;
-//        }
-//        else if(reg.mobilecode.value==""){
-//            reg.mobilecode.onblur();
-//            return false;
-//        }else{
-//            return true;
-//        }
-//    };
+    window.onload = function() {
+        var reg = document.register;
+
+        //用户名
+        reg.username.onfocus = function(){
+            if (reg.username.value == "") {
+                this.style.cssText ="border:1px solid #ccc;";
+                this.setAttribute("placeholder","您的账户名和登录名");
+            }
+        };
+        reg.username.onblur  = function(){
+            if (reg.username.value == "") {
+                this.style.cssText = "border:1px solid red;";
+                this.setAttribute("placeholder", "用户名不能为空");
+            }
+        };
+
+        //密码
+        reg.password.onfocus = function(){
+            if (reg.password.value == "") {
+                this.style.cssText ="border:1px solid #ccc;";
+                this.setAttribute("placeholder","建议至少使用两种字符组合");
+            }
+        };
+        reg.password.onblur  = function(){
+            if (reg.password.value == "") {
+                this.style.cssText = "border:1px solid red;";
+                this.setAttribute("placeholder", "密码不能为空");
+            }
+        };
+
+        //再次输入密码
+        reg.repassword.onfocus = function(){
+            if (reg.repassword.value == "") {
+                this.style.cssText ="border:1px solid #ccc;";
+                this.setAttribute("placeholder","请再次输入密码");
+            }
+        };
+        reg.repassword.onblur  = function(){
+            if (reg.repassword.value == "") {
+                this.style.cssText = "border:1px solid red;";
+                this.setAttribute("placeholder", "请再次输入密码");
+            }
+        };
+
+        //手机号
+        reg.mobile.onfocus = function(){
+            if (reg.mobile.value == "") {
+                this.style.cssText ="border:1px solid #ccc;";
+                this.setAttribute("placeholder","请输入手机号");
+            }
+        };
+        reg.mobile.onblur  = function(){
+            if (reg.mobile.value == "") {
+                this.style.cssText = "border:1px solid red;";
+                this.setAttribute("placeholder", "手机号不能为空");
+            }
+        };
+        //验证码
+        reg.verify.onfocus = function(){
+            if (reg.verify.value == "") {
+                this.style.cssText ="border:1px solid #ccc;";
+                this.setAttribute("placeholder","请输入验证码");
+            }
+        };
+        reg.verify.onblur  = function(){
+            if (reg.verify.value == "") {
+                this.style.cssText = "border:1px solid red;";
+                this.setAttribute("placeholder", "验证码不能为空");
+            }
+        };
+
+        //手机验证码
+        reg.mobilecode.onfocus = function(){
+            if (reg.mobilecode.value == "") {
+                this.style.cssText ="border:1px solid #ccc;";
+                this.setAttribute("placeholder","请输入手机验证码");
+            }
+        };
+        reg.mobilecode.onblur  = function(){
+            if (reg.mobilecode.value == "") {
+                this.style.cssText = "border:1px solid red;";
+                this.setAttribute("placeholder", "手机验证码不能为空");
+            }
+        };
+    };
+
+    function fromCheck(){
+        var reg = document.register;
+
+        if(reg.username.value==""){
+            reg.username.onblur();
+            return false;
+        }
+        else if(reg.password.value==""){
+            reg.password.onblur();
+            return false;
+        }
+        else if(reg.repassword.value==""){
+            reg.repassword.onblur();
+            return false;
+        }
+        else if(reg.mobile.value==""){
+            reg.mobile.onblur();
+            return false;
+        }
+        else if(reg.verify.value==""){
+            reg.verify.onblur();
+            return false;
+        }
+        else if(reg.mobilecode.value==""){
+            reg.mobilecode.onblur();
+            return false;
+        }else{
+            return true;
+        }
+    };
 
 </script>
 </body>

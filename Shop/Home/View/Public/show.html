@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link href="{$smarty.const.PUBLIC_URL}css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-sm-12">
+        <!-- Example Events -->
+        <div class="example-wrap">
+            <h4 class="example-title">事件</h4>
+            <div class="example">
+                <div class="alert alert-success" id="examplebtTableEventsResult" role="alert">Event: column-switch.bs.table</div>
+
+                <div class="bootstrap-table"><div class="fixed-table-toolbar"><div class="bars pull-left"><div class="btn-group hidden-xs" id="exampleTableEventsToolbar" role="group">
+                    <button type="button" class="btn btn-outline btn-default">
+                        <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-default">
+                        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-default">
+                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                    </button>
+                </div></div><div class="columns columns-right btn-group pull-right"><button class="btn btn-default btn-outline" type="button" name="refresh" title="刷新"><i class="glyphicon glyphicon-repeat"></i></button><button class="btn btn-default btn-outline" type="button" name="toggle" title="切换"><i class="glyphicon glyphicon-list-alt"></i></button><div class="keep-open btn-group" title="列"><button type="button" class="btn btn-default btn-outline dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="glyphicon glyphicon-list"></i> <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li><label><input type="checkbox" data-field="id" value="1" checked="checked"> ID</label></li><li><label><input type="checkbox" data-field="name" value="2" checked="checked"> 名称</label></li><li><label><input type="checkbox" data-field="price" value="3" checked="checked"> 价格</label></li></ul></div></div><div class="pull-right search"><input class="form-control input-outline" type="text" placeholder="搜索"></div></div><div class="fixed-table-container" style="height: 321px; padding-bottom: 36px;"><div class="fixed-table-header" style="margin-right: 0px; display: block;"><table class="table table-hover" style="width: 1612px;"><thead style="display: table-header-group;"><tr><th class="bs-checkbox " style="width: 36px; " data-field="state" tabindex="0"><div class="th-inner "><input name="btSelectAll" type="checkbox"></div><div class="fht-cell"></div></th><th style="" data-field="id" tabindex="0"><div class="th-inner ">ID</div><div class="fht-cell"></div></th><th style="" data-field="name" tabindex="0"><div class="th-inner ">名称</div><div class="fht-cell"></div></th><th style="" data-field="price" tabindex="0"><div class="th-inner ">价格</div><div class="fht-cell"></div></th></tr></thead></table></div><div class="fixed-table-body"><div class="fixed-table-loading" style="top: 37px; display: none;">正在努力地加载数据中，请稍候……</div><table id="exampleTableEvents" data-height="400" data-mobile-responsive="true" class="table table-hover" style="margin-top: -36px;">
+                    <thead style="display: table-header-group;"><tr><th class="bs-checkbox " style="width: 36px; " data-field="state" tabindex="0"><div class="th-inner "><input name="btSelectAll" type="checkbox"></div><div class="fht-cell"></div></th><th style="" data-field="id" tabindex="0"><div class="th-inner ">ID</div><div class="fht-cell"></div></th><th style="" data-field="name" tabindex="0"><div class="th-inner ">名称</div><div class="fht-cell"></div></th><th style="" data-field="price" tabindex="0"><div class="th-inner ">价格</div><div class="fht-cell"></div></th></tr></thead>
+                    <tbody><tr class="no-records-found"><td colspan="4">没有找到匹配的记录</td></tr></tbody></table></div><div class="fixed-table-footer" style="display: none;"><table><tbody><tr></tr></tbody></table></div><div class="fixed-table-pagination" style="display: none;"><div class="pull-left pagination-detail"><span class="pagination-info">显示第 1 到第 0 条记录，总共 0 条记录</span><span class="page-list" style="display: none;">每页显示 <span class="btn-group dropup"><button type="button" class="btn btn-default  btn-outline dropdown-toggle" data-toggle="dropdown"><span class="page-size">10</span> <span class="caret"></span></button><ul class="dropdown-menu" role="menu"><li class="active"><a href="javascript:void(0)">10</a></li></ul></span> 条记录</span></div><div class="pull-right pagination" style="display: none;"><ul class="pagination pagination-outline"><li class="page-first disabled"><a href="javascript:void(0)">«</a></li><li class="page-pre disabled"><a href="javascript:void(0)">‹</a></li><li class="page-next disabled"><a href="javascript:void(0)">›</a></li><li class="page-last disabled"><a href="javascript:void(0)">»</a></li></ul></div></div></div></div><div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- End Example Events -->
+    </div>
+</div>
+<script src="{$smarty.const.PUBLIC_URL}js/jquery.min.js"></script>
+<script src="{$smarty.const.PUBLIC_URL}js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -2,49 +2,40 @@
 /**
  * Created by PhpStorm.
  * User: Shadow
- * Date: 2016/6/5
- * Time: 11:29
+ * Date: 2016/6/17
+ * Time: 11:05
  */
 
 namespace Admin\Controller;
 use Think\Controller;
 class LoginController extends Controller{
     function index(){
-//        show_bug($_POST);
-        if(!empty($_POST)){
-            // 判断验证码是否正确
-            $verify = new \Think\Verify();
-            if(!$verify->check($_POST['captcha'])){
-                $this -> error('验证码错误',U('Login/index'));
-            } else {
-                //验证码正确
-                //判断用户名和密码，在model模型里边制作一个专门方法进行验证
-                $admin = new \Model\AdminModel();
-                $rst = $admin -> checkNamePwd($_POST['adminname'],$_POST['password']);
-                if($rst === false){
-                    $this -> error('用户名或密码错误',U('Login/index'));
-                } else {
-                    //登录信息持久化$_SESSION
-                    session('adminname',$rst['adminname']);
-                    session('admin_id',$rst['admin_id']);
-                    //$this ->redirect($url, $params, $delay, $msg)
-                    //$this -> redirect('Index/index',array('id'=>100,'name'=>'tom'),2,'用户马上登陆到后台');
+        if($_POST){
+            $model = D('Admin');
+            if($model->create($_POST, 4)){
+                $ret = $model->login();
+                if($ret === TRUE){
+                    //$this->success('登陆成功！',U('Index/index'));
                     $this -> redirect('Index/index');
+                    exit;
+                }else{
+                    $ret == 1 ? $this->error('用户名不存在！') : $this->error('密码不正确！');
                 }
+            }else{
+                $this->error($model->getError());
             }
-        }else{
-            $this ->display();
         }
+        $this->display();
     }
 
     public function logout(){
         //清空全部session
         session(null);
         //跳转至用户登录界面
-        $this -> redirect('Login/index');
+        $this->redirect('Login/index');
     }
 
-    public function verifyImg(){
+    public function captchaImg(){
         $config = array(
             'fontSize' => 20,
             'imageH' => 39,

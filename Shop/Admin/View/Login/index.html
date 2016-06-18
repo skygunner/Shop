@@ -100,7 +100,7 @@
                         <div class="col-xs-10 col-xs-offset-1">
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                <input type="text" id="username" name="adminname" class="form-control" placeholder="用户名">
+                                <input type="text" id="adminname" name="adminname" class="form-control" placeholder="用户名">
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <div class="col-xs-5" style="padding-left: 40px">
-                            <img src="{$smarty.const.__CONTROLLER__}/verifyImg" title="看不清?点击图片更换验证码" style="cursor:pointer" onclick="this.src='{$smarty.const.__CONTROLLER__}/verifyImg'"/>
+                            <img src="{$smarty.const.__CONTROLLER__}/captchaImg/" title="看不清?点击图片更换验证码" style="cursor:pointer" onclick="this.src='{$smarty.const.__CONTROLLER__}/captchaImg/'+Math.random();"/>
                         </div>
                     </div>
                     <div class="form-group form-actions">

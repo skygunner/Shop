@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link href="{$smarty.const.PUBLIC_URL}css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <ul class="breadcrumb" contenteditable="false" style="margin-top:15px;margin-bottom:15px;border: 1px solid #ddd;"
+        onfocus="this.blur()">
+        <li class="active">管理员列表</li>
+    </ul>
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <div class="fixed-table-toolbar">
+                <div class="bars pull-left"><div class="btn-group hidden-xs" id="exampleTableEventsToolbar" role="group">
+                    <a href="{$smarty.const.__MODULE__}/Manager/addAdmin" class="btn btn-outline btn-default" title="添加">
+                        <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
+                    </a>
+                    <a href="{$smarty.const.__MODULE__}/Manager/delAdmin/id/{$info['admin_id']}" class="btn btn-outline btn-default">
+                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+                <div class="columns columns-right btn-group pull-right">
+                    <button class="btn btn-default btn-outline" type="submit" name="refresh" title="搜索"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+                <div class="pull-right search">
+                    <input class="form-control input-outline" type="text" name="searchText" placeholder="搜索">
+                </div>
+            </div>
+        </div>
+
+        <!--管理员列表-->
+        <table class="table table-bordered table-hover " style="">
+            <thead>
+            <tr>
+                <th style="width: 35px;padding-left: 11px;"><input type="checkbox" value=""></th>
+                <th class="text-center" style="width: 50px">编号</th>
+                <th class="text-center">管理员名称</th>
+                <th class="text-center">手机号</th>
+                <th class="text-center">邮箱</th>
+                <th class="text-center">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {foreach $info as $k => $v}
+            <tr>
+                <td style="padding-left: 11px;"><input type="checkbox" value=""></td>
+                <td class="text-center">{$v.admin_id}</td>
+                <td>{$v.adminname}</td>
+                <td>{$v.mobile_phone}</td>
+                <td>{$v.email}</td>
+                <td class="text-center">
+                    <a href="{$smarty.const.__MODULE__}/Manager/saveAdmin/id/{$v.admin_id}" onfocus="this.blur()" class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-edit" role="button"></span>&nbsp;编辑</a>&nbsp;&nbsp;
+                    <a href="{$smarty.const.__MODULE__}/Manager/delAdmin/id/{$v.admin_id}" onfocus="this.blur()" class="btn btn-danger btn-xs" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp;删除</a></td>
+            </tr>
+            {/foreach}
+            <tr>
+                <td colspan="20" style="text-align: center;">
+                    {$pagelist}
+                </td>
+            </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+
+    </div>
+</div>
+<script src="{$smarty.const.PUBLIC_URL}js/jquery.min.js"></script>
+<script src="{$smarty.const.PUBLIC_URL}js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -8,8 +8,8 @@
  */
 
 namespace Admin\Controller;
-use Think\Controller;
-class UserController extends Controller{
+use Admin\Controller\IndexController;
+class UserController extends IndexController{
     function show_user(){
         $user = D("User");
         $total = $user -> count();

@@ -1,0 +1,14 @@
+/**
+ * 鸿宇通用CSS样式表
+ * Created by PhpStorm.
+ * User: Shadow
+ * Date: 2016-05-18 0018
+ * Time: 18:18
+ * Http: www.hongyuvip.com
+ */
+
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+a,img{border:none}
+:focus{outline: none;}

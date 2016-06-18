@@ -9,7 +9,7 @@ window.onload=function(){
 		otext.value='';
 		otext.style.color='rgb(51, 51, 51)';
 	};
-}
+};
 $(function(){
 				//手动控制轮播图
 				$('#one li').eq(0).show();
